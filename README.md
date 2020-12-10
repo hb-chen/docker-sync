@@ -1,6 +1,8 @@
 # docker-sync
 
-同步 Docker 镜像到指定镜像源，`config.yml`配置如下：
+同步 Docker 镜像到指定镜像仓库
+
+`config.yml`配置如下：
 
 ```yaml
 sync:
