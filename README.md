@@ -31,7 +31,7 @@ Status: Image is up to date for hello-world@sha256:1a523af650137b8accdaed439c17d
 docker.io/library/hello-world:latest@sha256:1a523af650137b8accdaed439c17d684df61ee4d74feac151b5b337bd29e7eec
 ```
 
-### 通过 [REPOSITORY[:TAG]] 查看 ImageId
+### 通过 REPOSITORY:TAG 查看 ImageId
 
 ```shell script
 $ docker images --format {{.ID}} hello-world:latest
