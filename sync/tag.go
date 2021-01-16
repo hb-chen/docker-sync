@@ -5,6 +5,8 @@ import (
 	"os/exec"
 
 	"github.com/pkg/errors"
+
+	"github.com/hb-chen/docker-sync/pkg/log"
 )
 
 func tag(dst *Image) error {
@@ -14,9 +16,10 @@ func tag(dst *Image) error {
 	cmd.Stdout = &stdout
 	cmd.Stderr = &stderr
 
+	log.Debug("\n" + cmd.String())
 	err := cmd.Run()
 	if err != nil {
-		return errors.Wrapf(err, stderr.String(), dst.String())
+		return errors.Wrapf(err, stderr.String(), dst.Id, dst.String())
 	}
 
 	return nil

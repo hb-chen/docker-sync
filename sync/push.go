@@ -22,11 +22,12 @@ func push(dst *Image) error {
 	cmd.Stdout = &stdout
 	cmd.Stderr = &stderr
 
+	log.Debug("\n" + cmd.String())
 	err := cmd.Run()
 	if err != nil {
 		return errors.Wrap(err, stderr.String())
 	} else {
-		log.Debug("\n"+cmd.String()+"\n\n", stdout.String())
+		log.Debug("\n", stdout.String())
 	}
 
 	out := strings.Split(stdout.String(), "\n")
