@@ -4,10 +4,12 @@
 
 `config.yml`配置如下：
 
+> `[]`为可选
+
 ```yaml
 sync:
   - src: REPOSITORY[:TAG][@DIGEST]
-    dst: REPOSITORY:TAG
+    dst: REPOSITORY[:TAG]
 ```
 
 同步后输出`synced.yml`结构:
