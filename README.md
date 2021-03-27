@@ -2,6 +2,10 @@
 
 同步 Docker 镜像到指定镜像仓库
 
+```shell
+go run main.go
+```
+
 `config.yml`配置如下：
 
 > `[]`为可选
@@ -20,7 +24,7 @@ sync:
     dst: REPOSITORY:TAG@DIGEST
 ```
 
-## 过程
+## 执行过程
 
 ### Pull Image
 
