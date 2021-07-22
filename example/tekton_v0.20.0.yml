@@ -29,6 +29,6 @@ sync:
   - src: gcr.io/tekton-releases/github.com/tektoncd/pipeline/vendor/github.com/googlecloudplatform/cloud-builders/gcs-fetcher/cmd/gcs-fetcher:v0.20.0@sha256:318301b387a872d076d5d28b90929fda9da939190d0bac23fd231509cf52c5d0
     dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/googlecloudplatform-gcs-fetcher:v0.20.0
   - src: gcr.io/google.com/cloudsdktool/cloud-sdk@sha256:27b2c22bf259d9bc1a291e99c63791ba0c27a04d2db0a43241ba0f1f20f4067f
-    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/cloudsdktool-cloud-sd
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/cloudsdktool-cloud-sdk
   - src: gcr.io/distroless/base@sha256:92720b2305d7315b5426aec19f8651e9e04222991f877cae71f40b3141d2f07e
     dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/distroless-base:debug
