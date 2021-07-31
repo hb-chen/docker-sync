@@ -1,0 +1,27 @@
+sync:
+  - src: cr.l5d.io/linkerd/proxy-init:v1.3.11
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-proxy-init:v1.3.11
+  - src: cr.l5d.io/linkerd/proxy:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-proxy:stable-2.10.2
+  - src: cr.l5d.io/linkerd/controller:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-controller:stable-2.10.2
+  - src: cr.l5d.io/linkerd/debug:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-debug:stable-2.10.2
+  - src: cr.l5d.io/linkerd/grafana:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-grafana:stable-2.10.2
+  - src: cr.l5d.io/linkerd/metrics-api:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-metrics-api:stable-2.10.2
+  - src: cr.l5d.io/linkerd/tap:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-tap:stable-2.10.2
+  - src: cr.l5d.io/linkerd/web:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-web:stable-2.10.2
+  - src: cr.l5d.io/linkerd/jaeger-webhook:stable-2.10.2
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/linkerd-jaeger-webhook:stable-2.10.2
+  - src: docker.l5d.io/buoyantio/emojivoto-emoji-svc:v11
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/buoyantio-emojivoto-emoji-svc:v11
+  - src: docker.l5d.io/buoyantio/emojivoto-web:v11
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/buoyantio-emojivoto-web:v11
+  - src: docker.l5d.io/buoyantio/emojivoto-voting-svc:v11
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/buoyantio-emojivoto-voting-svc:v11
+  - src: docker.l5d.io/buoyantio/emojivoto-web:v11
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/buoyantio-emojivoto-web:v11

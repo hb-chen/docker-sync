@@ -5,11 +5,13 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/hb-chen/docker-sync/pkg/log"
 	"github.com/pkg/errors"
+
+	"github.com/hb-chen/docker-sync/pkg/log"
 )
 
 func pull(src *Image, dst *Image) error {
+	var err error
 	cmd := exec.Command("docker", "pull", src.String())
 
 	var stdout, stderr bytes.Buffer
@@ -17,7 +19,7 @@ func pull(src *Image, dst *Image) error {
 	cmd.Stderr = &stderr
 
 	log.Debug("\n" + cmd.String())
-	err := cmd.Run()
+	err = cmd.Run()
 	if err != nil {
 		return errors.Wrap(err, stderr.String())
 	} else {
