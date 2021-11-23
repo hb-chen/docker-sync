@@ -1,0 +1,3 @@
+sync:
+  - src: gcr.io/pixie-oss/pixie-prod/operator/bundle_index:0.0.1
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-bundle_index:0.0.1

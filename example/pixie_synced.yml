@@ -1,0 +1,2 @@
+- src: gcr.io/pixie-oss/pixie-prod/operator/bundle_index:0.0.1@sha256:b9c514e31ea312096276892d1ddb46a98f85280c28ec4e490e33fae19fc080bd
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-bundle_index:0.0.1@sha256:b9c514e31ea312096276892d1ddb46a98f85280c28ec4e490e33fae19fc080bd
