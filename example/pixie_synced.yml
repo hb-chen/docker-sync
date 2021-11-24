@@ -1,2 +1,18 @@
 - src: gcr.io/pixie-oss/pixie-prod/operator/bundle_index:0.0.1@sha256:b9c514e31ea312096276892d1ddb46a98f85280c28ec4e490e33fae19fc080bd
   dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-bundle_index:0.0.1@sha256:b9c514e31ea312096276892d1ddb46a98f85280c28ec4e490e33fae19fc080bd
+- src: gcr.io/pixie-oss/pixie-prod/operator/bundle:0.0.15
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-bundle:0.0.15@sha256:7a71453e07de7fa454cde1924a8199ed0e3c9a3e02d9ed5950afbfa77c4b74b8
+- src: gcr.io/pixie-oss/pixie-prod/operator/operator_image:0.0.15
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-operator_image:0.0.15@sha256:0c6842e07b8c47429d62cf7f7a4ccfccfa70c25ec3e26573d53eb6aadbd1c645
+- src: gcr.io/pixie-oss/pixie-prod/vizier/cert_provisioner_image:0.9.14@sha256:d9b1bb7ae2e3c3e61c9555a657f1bb5a388a04d27d5e9743ef670bb7854ca4c3
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizier-cert_provisioner_image:0.9.14@sha256:1db85c8b46e2c313ef6387941d35ed2b6300a2583cc9036e065c1fb77ebd5b91
+- src: gcr.io/pixie-oss/pixie-prod/vizier/kelvin_image:0.9.14@sha256:07fc338b424f436a1f353029b943b5cf47adb983734e3438a1d99987f9402bf3
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-kelvin_image:0.9.14@sha256:2ace38579b19833d65222607f569550d9a84c2a576dc39365163a8cb2ec61f1e
+- src: gcr.io/pixie-oss/pixie-prod/vizier/certmgr_server_image:0.9.14@sha256:73f6b972b454a28527ab27cbfbe409a8d292b5d20ae1dcb5b3ea4e40d3f84f21
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-certmgr_server_image:0.9.14@sha256:f0412d8c5b34ef2f767a99b0e2523c6aabc1714052d84abe19a77cd5f06e447f
+- src: gcr.io/pixie-oss/pixie-prod/vizier/cloud_connector_server_image:0.9.14@sha256:a68672b21e04a8cd0239c8726e132c35ad79ea38962160700900d0adb940bad0
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-cloud_connector_server_image:0.9.14@sha256:57c8bce68f4b6ee830d05024473bb1156064e75e759e8c68cacb3a759573dd81
+- src: gcr.io/pixie-oss/pixie-prod/vizier/query_broker_server_image:0.9.14@sha256:35559aa2d79fb9342ad2b6f66583ecd8edce3074f27dc02b99a409f2f1d4f793
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-query_broker_server_image:0.9.14@sha256:7e52e76f16a0f17974596545d0bd55cc14c531a00c5739ef0e5f3a1dc383f072
+- src: gcr.io/pixie-prod/pixie-prod-artifacts/curl:1.0@sha256:b57f1d617b3eded350e2f78a5eece0c0839c59f59f1dece39f413f599dc382b1
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-artifacts-curl:1.0@sha256:b57f1d617b3eded350e2f78a5eece0c0839c59f59f1dece39f413f599dc382b1

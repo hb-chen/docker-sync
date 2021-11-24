@@ -1,3 +1,17 @@
 sync:
   - src: gcr.io/pixie-oss/pixie-prod/operator/bundle_index:0.0.1
     dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-bundle_index:0.0.1
+  - src: gcr.io/pixie-oss/pixie-prod/operator/bundle:0.0.15
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-bundle:0.0.15
+  - src: gcr.io/pixie-oss/pixie-prod/operator/operator_image:0.0.15
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-operator-operator_image:0.0.15
+  - src: gcr.io/pixie-oss/pixie-prod/vizier/kelvin_image:0.9.14
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-kelvin_image:0.9.14
+  - src: gcr.io/pixie-oss/pixie-prod/vizier/certmgr_server_image:0.9.14
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-certmgr_server_image:0.9.14
+  - src: gcr.io/pixie-oss/pixie-prod/vizier/cloud_connector_server_image:0.9.14
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-cloud_connector_server_image:0.9.14
+  - src: gcr.io/pixie-oss/pixie-prod/vizier/query_broker_server_image:0.9.14
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-vizie-query_broker_server_image:0.9.14
+  - src: gcr.io/pixie-prod/pixie-prod-artifacts/curl:1.0
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/pixie-artifacts-curl:1.0
