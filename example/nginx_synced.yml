@@ -1,0 +1,5 @@
+- src: k8s.gcr.io/ingress-nginx/controller:v1.1.0@sha256:f766669fdcf3dc26347ed273a55e754b427eb4411ee075a53f30718b4499076a
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/ingress-nginx-controller:v1.1.0@sha256:4f5df867e9367f76acfc39a0f85487dc63526e27735fa82fc57d6a652bafbbf6
+- src: k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.1.1@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/ingress-nginx-kube-webhook-certgen:v1.1.1@sha256:78351fc9d9b5f835e0809921c029208faeb7fbb6dc2d3b0d1db0a6584195cfed
+
