@@ -78,5 +78,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	sync.Run(conf.Sync)
+	sync.Run(&conf)
 }

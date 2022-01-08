@@ -1,6 +1,9 @@
 package config
 
 type Config struct {
+	Pull bool
+	Push bool
+
 	Sync []*Sync
 }
 

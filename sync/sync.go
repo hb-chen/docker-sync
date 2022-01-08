@@ -1,44 +1,91 @@
 package sync
 
 import (
+	"bytes"
 	"io/ioutil"
 	"os"
+	"os/exec"
 	"path/filepath"
+	"strings"
+
+	"github.com/pkg/errors"
+	"gopkg.in/yaml.v2"
 
 	"github.com/hb-chen/docker-sync/config"
 	"github.com/hb-chen/docker-sync/pkg/log"
-	"gopkg.in/yaml.v2"
 )
 
-func Run(conf []*config.Sync) {
-	synced := make([]*config.Sync, 0, len(conf))
-	for _, s := range conf {
+func Run(conf *config.Config) {
+	sync := conf.Sync
+	synced := make([]*config.Sync, 0, len(sync))
+	for _, s := range sync {
 
 		src := NewImageWith(s.Src)
 		dst := NewImageWith(s.Dst)
 
-		if err := pull(src, dst); err != nil {
-			log.Error(err)
-			continue
+		if conf.Pull {
+			if err := pull(src, dst); err != nil {
+				log.Error(err)
+				continue
+			}
 		}
 
-		if err := tag(dst); err != nil {
-			log.Error(err)
-			continue
+		if conf.Push {
+			var err error
+			dst.Id, err = getImageIdWith(src.Repository, src.Digest)
+			if err != nil {
+				log.Error(err)
+			}
+
+			if err := tag(dst); err != nil {
+				log.Error(err)
+				continue
+			}
+
+			if err := push(dst); err != nil {
+				log.Error(err)
+				continue
+			}
+
+			synced = append(synced, &config.Sync{
+				Src: src.String(),
+				Dst: dst.String(),
+			})
 		}
 
-		if err := push(dst); err != nil {
-			log.Error(err)
-			continue
-		}
-
-		synced = append(synced, &config.Sync{
-			Src: src.String(),
-			Dst: dst.String(),
-		})
 	}
 
-	storeSynced(synced)
+	if conf.Push {
+		storeSynced(synced)
+	}
+}
+
+func getImageIdWith(repo, digest string) (string, error) {
+	if len(digest) > 0 {
+		repo += "@" + digest
+	}
+	cmd := exec.Command("docker", "images", "--format", "{{.ID}}", repo)
+	var stdout, stderr bytes.Buffer
+	cmd.Stdout = &stdout
+	cmd.Stderr = &stderr
+
+	log.Debug("\n" + cmd.String())
+	err := cmd.Run()
+	if err != nil {
+		return "", errors.Wrap(err, stderr.String())
+	} else {
+		log.Debug("\n", stdout.String())
+	}
+
+	imageId := ""
+	out := strings.Split(stdout.String(), "\n")
+	if len(out) > 0 {
+		imageId = out[0]
+	} else {
+		return "", errors.New("image id length 0")
+	}
+
+	return imageId, nil
 }
 
 func storeSynced(synced []*config.Sync) error {
