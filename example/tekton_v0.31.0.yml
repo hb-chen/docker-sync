@@ -12,8 +12,8 @@ sync:
     dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-triggers-interceptors:v0.18.0
 
   # dashboard
-  - src: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.23.0@sha256:4f70cd5f10bb6c8594b7810cf1fd8a8950d535ef0bb95e2c5f214a620646d720
-    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-dashboard:v0.23.0
+  - src: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.24.1@sha256:4f70cd5f10bb6c8594b7810cf1fd8a8950d535ef0bb95e2c5f214a620646d720
+    dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-dashboard:v0.24.1
 
   # pipeline
   - src: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.31.0@sha256:b087e73302cf704ad2d0c3cffa926807b45a74bae746fc9a6e657954418d7c39

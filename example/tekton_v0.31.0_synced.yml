@@ -6,8 +6,8 @@
   dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-triggers-webhook:v0.18.0@sha256:ceb512854dce660d71b83549ee420d3f5fc9f6cd0f6ecb1bd44d4698bee21923
 - src: gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/interceptors:v0.18.0@sha256:ca8025d2471deb7f51826227b89634413c465c66e785565c8e4db02b8f2c00e9
   dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-triggers-interceptors:v0.18.0@sha256:80aa0a8d531158ea0fc43b889fc12cf1617d7902c0e7eedb0fbeef370e200f6e
-- src: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.23.0@sha256:4f70cd5f10bb6c8594b7810cf1fd8a8950d535ef0bb95e2c5f214a620646d720
-  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-dashboard:v0.23.0@sha256:570437bdd2a1a23a308b3fdc01f0e90f40e6498f069bf3b561494aa29067b4e4
+- src: gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.24.1@sha256:fe4febbb74ca3e7027c29719e32e38074b3af6be588ee08cca5826f21fa003a1
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-dashboard:v0.24.1@sha256:fa67aff30f468305b004a3e87814822ecee4eb5dcff61724eb5b6b053399a683
 - src: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller:v0.31.0@sha256:b087e73302cf704ad2d0c3cffa926807b45a74bae746fc9a6e657954418d7c39
   dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/tektoncd-controller:v0.31.0@sha256:50a6c33b448df25f222506e3d49b023519cf1a54266fcc50591cb458bc43a025
 - src: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/kubeconfigwriter:v0.31.0@sha256:4076b48b126adbf4fe8451d20f95a4c319de84d0837edc123bfa9549e7e5fddb
