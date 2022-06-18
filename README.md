@@ -11,6 +11,10 @@ go run main.go
 > `[]`为可选
 
 ```yaml
+# 分别配置拉取和推送，便于在不同网络环境完成工作
+pull: true
+push: true
+
 sync:
   - src: REPOSITORY[:TAG][@DIGEST]
     dst: REPOSITORY[:TAG]

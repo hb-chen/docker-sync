@@ -1,3 +1,7 @@
+# 分别配置拉取和推送，便于在不同网络环境完成工作
+pull: true
+push: true
+
 sync:
   - src: hello-world:latest@sha256:1a523af650137b8accdaed439c17d684df61ee4d74feac151b5b337bd29e7eec
     dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/hello-world:v0.0.1
