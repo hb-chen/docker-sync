@@ -24,7 +24,7 @@ func Run(conf *config.Config) {
 		dst := NewImageWith(s.Dst)
 
 		if conf.Pull {
-			if err := pull(src, dst); err != nil {
+			if err := pull(src, dst, conf.PullOptions...); err != nil {
 				log.Error(err)
 				continue
 			}

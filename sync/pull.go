@@ -5,14 +5,14 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/pkg/errors"
-
 	"github.com/hb-chen/docker-sync/pkg/log"
+	"github.com/pkg/errors"
 )
 
-func pull(src *Image, dst *Image) error {
+func pull(src *Image, dst *Image, opts ...string) error {
 	var err error
-	cmd := exec.Command("docker", "pull", src.String())
+	args := append([]string{"pull", src.String()}, opts...)
+	cmd := exec.Command("docker", args...)
 
 	var stdout, stderr bytes.Buffer
 	cmd.Stdout = &stdout

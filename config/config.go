@@ -1,13 +1,15 @@
 package config
 
 type Config struct {
-	Pull bool
-	Push bool
+	Pull        bool     `yaml:"pull"`
+	PullOptions []string `yaml:"pull_options"`
 
-	Sync []*Sync
+	Push bool `yaml:"push"`
+
+	Sync []*Sync `yaml:"sync"`
 }
 
 type Sync struct {
-	Src string
-	Dst string
+	Src string `yaml:"src"`
+	Dst string `yaml:"dst"`
 }

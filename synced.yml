@@ -1,2 +1,2 @@
-- src: hello-world:latest@sha256:1a523af650137b8accdaed439c17d684df61ee4d74feac151b5b337bd29e7eec
-  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/hello-world:v0.0.1@sha256:90659bf80b44ce6be8234e6ff90a1ac34acbeb826903b02cfa0da11c82cbc042
+- src: hello-world:latest@sha256:7d246653d0511db2a6b2e0436cfd0e52ac8c066000264b3ce63331ac66dca625
+  dst: registry.cn-hangzhou.aliyuncs.com/hb-chen/hello-world:v0.0.1@sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2f13d8c4
